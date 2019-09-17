@@ -8,6 +8,7 @@
              :width="width"
              :color="color"
              :loader="loader"
+             :message="message"
              :background-color="bgColor">
       <h3 v-if="useSlot">Loading ...</h3>
     </loading>
@@ -58,6 +59,11 @@
         class="text-muted">{{width}}</span>
       </div>
 
+      <div class="form-group">
+        <label for="input-message-1">Message?</label>
+        <input type="text" id="input-message-1" v-model="message">
+      </div>
+
       <div class="form-group mt-3">
         <button class="btn btn-outline-primary btn-sm" @click.prevent="simulate">Show loader</button>
       </div>
@@ -78,6 +84,7 @@
         loader: 'spinner',
         color: '#007bff',
         bgColor: '#ffffff',
+        message: null,
         height: 128,
         width: 128,
         timeout: 3000, //ms

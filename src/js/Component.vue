@@ -15,6 +15,7 @@
         <slot name="before"></slot>
         <slot name="default">
           <component :is="loader" :color="color" :width="width" :height="height"></component>
+          <div v-if="message" class="vld-message" :style="{ color: this.color }">{{ message }}</div>
         </slot>
         <slot name="after"></slot>
       </div>
@@ -56,6 +57,7 @@
       },
       color: String,
       backgroundColor: String,
+      message: String,
       opacity: Number,
       width: Number,
       height: Number,

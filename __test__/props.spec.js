@@ -15,6 +15,7 @@ describe('Loading component props', () => {
         height: 100,
         width: 100,
         loader: 'dots',
+        message: 'test',
         zIndex: 9999,
       },
     });

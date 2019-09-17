@@ -47,6 +47,11 @@
         class="text-muted">{{width}}</span>
       </div>
 
+      <div class="form-group">
+        <label for="input-message-1">Message?</label>
+        <input type="text" id="input-message-1" v-model="message">
+      </div>
+
       <div class="form-group mt-3">
         <button class="btn btn-outline-primary btn-sm" @click.prevent="simulate">Show loader</button>
       </div>
@@ -71,6 +76,7 @@
         timeout: 3000, //ms
         color: '#00ab00',
         bgColor: '#4b4b4b',
+        message: null,
         height: 64,
         width: 64,
       }
@@ -106,6 +112,7 @@
           height: this.height,
           width: this.width,
           loader: this.loader,
+          message: this.message,
           opacity: 0.3,
         }, slots);
 

@@ -33,3 +33,8 @@
 .vld-overlay .vld-icon, .vld-parent {
   position: relative
 }
+
+.vld-overlay .vld-icon .vld-message {
+  text-align: center;
+  margin: 3px;
+}
