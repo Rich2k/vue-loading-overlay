@@ -1,6 +1,6 @@
 {
   "name": "vue-loading-overlay",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "Vue.js component for full screen loading indicator.",
   "main": "dist/vue-loading.js",
   "browser": "dist/vue-loading.min.js",
@@ -34,7 +34,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --config=webpack.config.dev.js",
     "docs": "cross-env NODE_ENV=production webpack --config=webpack.config.dev.js --progress --mode production",
     "build": "cross-env NODE_ENV=production webpack --progress --mode production",
-    "prepublishOnly": "yarn run build"
+    "prepublishOnly": "yarn run build",
+    "prepare": "yarn run build"
   },
   "dependencies": {},
   "devDependencies": {
